@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Sinha - IT/Software Pre-Sales & Enterprise Architect</title>
+    <link rel="icon" type="image/png" href="pictures/Abhishek-Profile-noBG.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #f7fafc;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2d3748;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 120px 0 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-text .subtitle {
+            font-size: 1.2rem;
+            color: #2d3748;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text .description {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(49, 130, 206, 0.1);
+            border: 2px solid rgba(49, 130, 206, 0.3);
+            border-radius: 50%;
+            color: #3182ce;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+
+        .social-link:hover {
+            background: #3182ce;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(49, 130, 206, 0.3);
+        }
+
+        .social-link.github:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        .social-link.linkedin:hover {
+            background: #0077b5;
+            color: #fff;
+        }
+
+        .social-link.youtube:hover {
+            background: #ff0000;
+            color: #fff;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: #3182ce;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #2c5aa0;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #3182ce;
+            border: 2px solid #3182ce;
+        }
+
+        .btn-secondary:hover {
+            background: #3182ce;
+            color: #fff;
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid #e2e8f0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .section-alt {
+            background: #f7fafc;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #1a202c;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3182ce;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        /* Experience Section */
+        .experience-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .experience-item {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #3182ce;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+
+
+        .experience-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-company {
+            color: #3182ce;
+            font-weight: 500;
+        }
+
+        .experience-date {
+            color: #ffffff;
+            font-size: 0.9rem;
+            background: #3182ce;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+
+        .experience-description {
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .skill-category h3 {
+            color: #1a202c;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .skill-name {
+            color: #2d3748;
+            font-weight: 500;
+        }
+
+        .skill-level {
+            width: 100px;
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: #3182ce;
+            border-radius: 3px;
+        }
+
+        /* Certifications Section */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .cert-item {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .cert-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .cert-item i {
+            font-size: 2.5rem;
+            color: #3182ce;
+            margin-bottom: 1rem;
+        }
+
+        .cert-title {
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-issuer {
+            color: #4a5568;
+            font-size: 0.9rem;
+        }
+
+        .cert-details {
+            color: #718096;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .education-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #3182ce;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(49, 130, 206, 0.3);
+        }
+
+        .education-icon {
+            font-size: 2rem;
+            color: #3182ce;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .education-content {
+            flex: 1;
+        }
+
+        .education-title {
+            color: #1a202c;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-institution {
+            color: #4a5568;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+        }
+
+        .education-date {
+            color: #718096;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            font-style: italic;
+        }
+
+        .education-description {
+            color: #4a5568;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+
+
+        /* Contact Section */
+        .contact-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .contact-item {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            color: #3182ce;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h3 {
+            color: #1a202c;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #4a5568;
+            margin: 0;
+        }
+
+        .contact-message {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: #3182ce;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .contact-link:hover {
+            background: #2c5aa0;
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #2d3748;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .mobile-menu-toggle:hover {
+            background-color: rgba(49, 130, 206, 0.1);
+        }
+        
+        .mobile-menu-toggle:active {
+            background-color: rgba(49, 130, 206, 0.2);
+        }
+
+        .nav-links.mobile-open {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            gap: 1rem;
+        }
+
+        /* Responsive Design */
+        /* Large tablets and small desktops */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero-text h1 {
+                font-size: 3rem;
+            }
+            
+            .stats-grid,
+            .experience-grid,
+            .skills-grid,
+            .education-grid,
+            .cert-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+
+        }
+
+        /* Tablets */
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 100px 0 60px;
+                min-height: auto;
+            }
+            
+            .hero-content,
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+                line-height: 1.3;
+            }
+            
+            .hero-text .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-text .description {
+                font-size: 1rem;
+            }
+
+            .profile-pic {
+                width: 250px;
+                height: 250px;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .experience-grid,
+            .skills-grid,
+            .education-grid,
+            .cert-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .contact-link {
+                width: 100%;
+                max-width: 250px;
+                justify-content: center;
+            }
+        }
+        
+        /* Mobile phones */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .hero {
+                padding: 80px 0 40px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-text .subtitle {
+                font-size: 1rem;
+            }
+            
+            .profile-pic {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .stat-item,
+            .experience-item,
+            .skill-category,
+            .education-item,
+            .cert-item,
+            .contact-item {
+                padding: 1.5rem;
+            }
+            
+
+            
+            .social-links {
+                gap: 1rem;
+            }
+            
+            .social-link {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+        }
+        
+        /* Extra small devices */
+        @media (max-width: 320px) {
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .profile-pic {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Abhishek Sinha</a>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Abhishek Sinha</h1>
+                    <div class="subtitle">TOGAF Certified Enterprise Solutions Architect & Software Pre-Sales</div>
+                    <div class="description">21+ years of excellence in Software technical Sales, designing, managing, and developing complex business applications and cloud solutions.</div>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="#about" class="btn btn-secondary">Learn More</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/theabhisheksinha" class="social-link github" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/theabhisheksinha/" class="social-link linkedin" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@the.abhisheksinha" class="social-link youtube" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="pictures/Abhishek-Profile-noBG.png" alt="Abhishek Sinha" class="profile-pic">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>With over 21 years of experience, I specialize in transforming complex technology challenges into strategic business solutions. My expertise lies at the intersection of enterprise architecture and business strategy, where I design and implement solutions that deliver measurable value.</p>
+                    
+                    <p>As a TOGAF certified Enterprise Architect, I focus on creating robust, scalable systems that align seamlessly with organizational objectives. My approach combines technical excellence with deep business understanding to ensure every solution drives meaningful outcomes.</p>
+                    
+                    <p>I'm passionate about leveraging cutting-edge technologies, particularly Artificial Intelligence and Generative AI, to enhance solution quality and accelerate delivery timelines. These tools enable me to build next-generation applications that are both powerful and user-friendly.</p>
+                    
+                    <p>Beyond my primary role, I actively contribute to the tech community through online training and content creation, helping professionals navigate our rapidly evolving digital landscape and build essential skills for the future.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">21+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-item">
+                    <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Manager Pre-Sales/Pre-Sales Solutions Architect</div>
+                                <div class="experience-company">Cast Software India Pvt. Ltd, Bangalore</div>
+                            </div>
+                        <div class="experience-date">October 2019 — Present</div>
+                    </div>
+                    <div class="experience-description">
+                        Pre-sales solutions for the prospect/existing customer for Cast Software. Demonstrating the capabilities of Cast Application Intelligence Platform and Cast Highlight, Cast Imaging for all pre-sales activities, product training, implementation management, proof of concepts, RFP and proposal writing, Value proposition and value measurements
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Solutions Architect</div>
+                                <div class="experience-company">Happiest Minds Technologies Pvt. Ltd, Bangalore</div>
+                            </div>
+                        <div class="experience-date">September 2014 — September 2019</div>
+                    </div>
+                    <div class="experience-description">
+                        Solutions, Design, Migration, Transition, development and maintenance and Management (Green-field implementation, Project, Changes and Support) of on-premise off the shelf application suites, Big Data application implementation, Cloud based implementations and online training, implementation management, proof of concepts, RFP and proposal writing, Value proposition and value measurements
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Technical Leader, Lean Navigator</div>
+                                <div class="experience-company">Atos India Pvt. Ltd, Bangalore</div>
+                            </div>
+                        <div class="experience-date">May 2011 — September 2014</div>
+                    </div>
+                    <div class="experience-description">
+                        Migration, Transition, development and maintenance and Management of (Project development, Changes and L3 Support) of Clarify (Amdocs CRM 7.5), Lean management
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Assistant Manager</div>
+                                <div class="experience-company">Videocon Telecommunications Ltd., Gurgaon</div>
+                            </div>
+                        <div class="experience-date">December 2010 — May 2011</div>
+                    </div>
+                    <div class="experience-description">
+                        Vendor Management, Business Analysis, Application delivery management, technical documentation, requirement gathering from various business and regulatory body (TRAI)
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Application Consultant</div>
+                                <div class="experience-company">IBM India Pvt Ltd., Noida</div>
+                            </div>
+                        <div class="experience-date">December 2007 — December 2010</div>
+                    </div>
+                    <div class="experience-description">
+                        Team management, Development and Maintenance of Clarify 11.5 and Siebel 8 Applications
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Lead Analyst</div>
+                                <div class="experience-company">Patni Computer Systems Ltd., NOIDA</div>
+                            </div>
+                        <div class="experience-date">August 2005 — December 2007</div>
+                    </div>
+                    <div class="experience-description">
+                        Team management, Development and Maintenance of Clarify 11.5 Applications
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                            <div>
+                                <div class="experience-title">Lead Analyst</div>
+                                <div class="experience-company">Colwell and Salmon Communications India Pvt Ltd., Noida</div>
+                            </div>
+                        <div class="experience-date">November 2004 — April 2005</div>
+                    </div>
+                    <div class="experience-description">
+                        Application management, Development and Maintenance of Clarify 11.5 Applications
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Cloud Technologies</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">AWS</span>
+                        <div class="skill-level"><div class="skill-progress" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Azure</span>
+                        <div class="skill-level"><div class="skill-progress" style="width: 85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Google Cloud</span>
+                        <div class="skill-level"><div class="skill-progress" style="width: 75%"></div></div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Scripting</span>
+                        <div class="skill-level"><div class="skill-progress" style="width: 98%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Clear Basic</span>
+                        <div class="skill-level"><div class="skill-progress" style="width: 95%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-level"><div class="skill-progress" style="width: 85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-level"><div class="skill-progress" style="width: 80%"></div></div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Architecture & Design</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">TOGAF</span>
+                        <div class="skill-level"><div class="skill-progress" style="width: 95%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Microservices</span>
+                        <div class="skill-level"><div class="skill-progress" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">API Design</span>
+                        <div class="skill-level"><div class="skill-progress" style="width: 88%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="education-grid">
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3 class="education-title">Bachelor of Technology</h3>
+                            <div class="education-institution">Uttar Pradesh Technical University, Lucknow</div>
+                            <div class="education-date">November 2000 — June 2004</div>
+                            <div class="education-description">Majoring in Electronics and Telecommunication</div>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3 class="education-title">Indian School Certificate</h3>
+                            <div class="education-institution">New Delhi, I.S.C., Prayagraj</div>
+                            <div class="education-date">April 1997 — May 1998</div>
+                            <div class="education-description">Majoring in Science, Mathematics, Hindi and English</div>
+                        </div>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3 class="education-title">Indian Council for Secondary Education</h3>
+                            <div class="education-institution">New Delhi, I.C.S.E., Prayagraj</div>
+                            <div class="education-date">April 1995 — May 1996</div>
+                            <div class="education-description">Majoring in Science, Mathematics, Social Studies, Hindi, English and Commerce</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title">Certifications & Credentials</h2>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <i class="fas fa-robot"></i>
+                    <div class="cert-title">Artificial Intelligence and Generative AI</div>
+                    <div class="cert-issuer">Training Completed • Jun 2025</div>
+                    <div class="cert-details">Specialized training in AI and Generative AI technologies</div>
+                </div>
+                <div class="cert-item">
+                    <i class="fab fa-microsoft"></i>
+                    <div class="cert-title">Microsoft Certified-Azure Fundamentals</div>
+                    <div class="cert-issuer">Microsoft • December 2019</div>
+                    <div class="cert-details">Certification ID: 17667365 | Transcript ID: 1235782</div>
+                </div>
+                <div class="cert-item">
+                    <i class="fab fa-aws"></i>
+                    <div class="cert-title">AWS Certified Developer - Associate</div>
+                    <div class="cert-issuer">Amazon Web Services • December 2019</div>
+                    <div class="cert-details">Validation Number: P0LT0SF1CJF11HG7</div>
+                </div>
+                <div class="cert-item">
+                    <i class="fab fa-aws"></i>
+                    <div class="cert-title">AWS Certified Solutions Architect</div>
+                    <div class="cert-issuer">Amazon Web Services • December 2017</div>
+                    <div class="cert-details">Validation Number: T9DHNZFC2FRE1Z9T</div>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <div class="cert-title">TOGAF 9.1 Enterprise Architect</div>
+                    <div class="cert-issuer">The Open Group • June 2016</div>
+                    <div class="cert-details">CID: 108771</div>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <div class="cert-title">Big Data Developer</div>
+                    <div class="cert-issuer">Wiley • October 2015</div>
+                    <div class="cert-details">Wiley Certified Big Data Developer training</div>
+                </div>
+                <div class="cert-item">
+                    <i class="fab fa-android"></i>
+                    <div class="cert-title">Android Application Programming</div>
+                    <div class="cert-issuer">Aptech Ltd • September 2015</div>
+                    <div class="cert-details">Core Java on Eclipse</div>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-language"></i>
+                    <div class="cert-title">I.E.L.T.S.</div>
+                    <div class="cert-issuer">IELTS • July 2014</div>
+                    <div class="cert-details">Test report form: 14IN063720SINA855A</div>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-cogs"></i>
+                    <div class="cert-title">LEAN Foundation - Navigator</div>
+                    <div class="cert-issuer">Atos • July 2012</div>
+                    <div class="cert-details">Process improvement implementation and training</div>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-database"></i>
+                    <div class="cert-title">OCA - Oracle Database 10g Certified Associate</div>
+                    <div class="cert-issuer">Oracle • September 2010</div>
+                </div>
+                <div class="cert-item">
+                    <i class="fab fa-ibm"></i>
+                    <div class="cert-title">SOA Foundation Certified</div>
+                    <div class="cert-issuer">IBM • May 2010</div>
+                    <div class="cert-details">IBM certified SOA Practitioner</div>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-database"></i>
+                    <div class="cert-title">Siebel 8.0 Consultant</div>
+                    <div class="cert-issuer">Oracle • June 2009</div>
+                    <div class="cert-details">Oracle certified Siebel 8.0 Consultant</div>
+                </div>
+                <div class="cert-item">
+                    <i class="fas fa-language"></i>
+                    <div class="cert-title">Level 1 Spanish Language</div>
+                    <div class="cert-issuer">Instituto Hispania • May 2008</div>
+                    <div class="cert-details">Basic Spanish Language training, New Delhi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <div class="contact-message">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Feel free to get in touch.
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Bangalore, India</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>+91-9818364419</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>sayhi2sinha@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:sayhi2sinha@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        Email Me
+                    </a>
+                    <a href="https://www.linkedin.com/in/theabhisheksinha/" class="contact-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                    <a href="https://www.youtube.com/@the.abhisheksinha" class="contact-link" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                        YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 4px 25px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const menuIcon = mobileMenuToggle.querySelector('i');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('mobile-open');
+            
+            // Toggle icon between hamburger and close
+            if (navLinks.classList.contains('mobile-open')) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('mobile-open');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.nav') && navLinks.classList.contains('mobile-open')) {
+                navLinks.classList.remove('mobile-open');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                navLinks.classList.remove('mobile-open');
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
