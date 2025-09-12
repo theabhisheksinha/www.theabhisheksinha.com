@@ -832,7 +832,181 @@
             line-height: 1.5;
         }
 
+        /* Innovation & Leadership Section */
+        .innovation-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
 
+        .innovation-project {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+            border-left: 6px solid #3182ce;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .innovation-project::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(49, 130, 206, 0.03), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .innovation-project:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(49, 130, 206, 0.2);
+            border-left-color: #2b6cb0;
+        }
+
+        .innovation-project:hover::before {
+            left: 100%;
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #3182ce, #4299e1);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 8px 20px rgba(49, 130, 206, 0.3);
+        }
+
+        .project-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .project-icon:hover .project-logo {
+            transform: scale(1.1);
+        }
+
+        .project-info {
+            flex: 1;
+        }
+
+        .project-title {
+            color: #1a202c;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .project-subtitle {
+            color: #3182ce;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(49, 130, 206, 0.1);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .project-description {
+            margin-bottom: 2.5rem;
+        }
+
+        .project-description p {
+            color: #4a5568;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .project-contributions h4 {
+            color: #1a202c;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .contributions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contribution-item {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .contribution-item:hover {
+            background: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .contribution-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3182ce, #4299e1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: white;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(49, 130, 206, 0.3);
+        }
+
+        .contribution-content h5 {
+            color: #1a202c;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .contribution-content p {
+            color: #4a5568;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .project-impact {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #3182ce;
+        }
+
+        .project-impact p {
+            color: #1a202c;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0;
+        }
 
         /* Contact Section */
         .contact-content {
@@ -1050,6 +1224,25 @@
                 gap: 1.5rem;
             }
             
+            .contributions-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .innovation-project {
+                padding: 2rem;
+            }
+            
+            .project-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .project-title {
+                font-size: 1.5rem;
+            }
+            
             .contact-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
@@ -1124,6 +1317,31 @@
                 padding: 1.5rem;
             }
             
+            .innovation-project {
+                padding: 1.5rem;
+            }
+            
+            .project-title {
+                font-size: 1.3rem;
+            }
+            
+            .project-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .project-logo {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .contribution-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
+            
 
             
             .social-links {
@@ -1165,6 +1383,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#innovation">Innovation</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#certifications">Certifications</a></li>
@@ -1186,12 +1405,12 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Abhishek Sinha</h1>
-                    <div class="subtitle">TOGAF Certified Enterprise Solutions Architect & Software Pre-Sales</div>
-                    <div class="description">21+ years of excellence in Software technical Sales, designing, managing, and developing complex business applications and cloud solutions.</div>
+                    <div class="subtitle">Technology Innovator & Enterprise Solutions Architect</div>
+                    <div class="description">Passionate problem-solver with 21+ years of transforming complex business challenges into cutting-edge technology solutions. Specializing in enterprise architecture, cloud modernization, and AI-driven digital transformation across diverse industries.</div>
                     <div class="cta-buttons">
                         <a href="#contact" class="btn btn-primary">Get In Touch</a>
                         <a href="#about" class="btn btn-secondary">Learn More</a>
-                        <a href="resume/abhishek_sinha_Software_Pre-Sales.pdf" class="btn btn-secondary" download="Abhishek_Sinha_Resume.pdf" target="_blank">
+                        <a href="resume/Abhishek-Sinha-Resume-Sep2025.pdf" class="btn btn-secondary" download="Abhishek-Sinha-Resume-Sep2025.pdf" target="_blank">
                             <i class="fas fa-download"></i> Download Resume
                         </a>
                     </div>
@@ -1220,30 +1439,32 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>With more than two decades of experience in the tech industry, I've learned that the core of my work is creating solutions that not only address business challenges but also inspire innovation. As a TOGAF-certified Enterprise Architect with a deep understanding of cloud platforms like AWS and Azure, I've had the privilege of working across diverse sectors, including the public sector, telecom, banking, and insurance.</p>
+                    <p>I'm a technology enthusiast who thrives on solving complex problems through innovative solutions. With over two decades in the tech industry, I've discovered that the most rewarding aspect of my work is transforming challenging business requirements into elegant, scalable technology architectures that drive real impact.</p>
                     
-                    <p>At CAST, I lead presales engagements for public sector organizations, as well as large and medium-sized enterprises across India, the Middle East, and the APAC region. In this role, I collaborate closely with clients to understand their unique business needs and design tailored solutions that modernize their IT landscapes through our cutting edge Software Intelligent platforms. Whether it's helping organizations transition to the cloud, optimize their existing application code, or innovate with cutting-edge technologies, I ensure that every solution aligns with their strategic goals.</p>
+                    <p>As a TOGAF-certified Enterprise Architect, I specialize in designing and implementing cutting-edge solutions across cloud platforms like AWS and Azure. My expertise spans multiple industries—from public sector modernization to telecom infrastructure, banking systems, and insurance platforms—where I've consistently delivered solutions that not only meet immediate needs but anticipate future challenges.</p>
                     
-                    <p>My previous roles as Solutions Architect at Happiest Minds Technologies and Technical Leader at Atos International further shaped my expertise in IT transformation and custom application development. These experiences have allowed me to fine-tune my skills in designing scalable, secure, and future-ready solutions.</p>
+                    <p>Currently at CAST, I lead presales and solution architecture for Software Intelligence platforms, helping organizations across India, Middle East, and APAC transform their IT landscapes. My approach combines deep technical knowledge with strategic thinking, ensuring every solution I architect delivers measurable business value while embracing emerging technologies like AI and machine learning.</p>
                     
-                    <p>Outside of work, I'm passionate about sharing knowledge and insights through my podcast and YouTube channel, where I explore trends in technology, enterprise architecture, and digital transformation.</p>
+                    <p>What drives me is the puzzle-solving nature of technology challenges. Whether it's migrating legacy systems to the cloud, optimizing application performance, or designing resilient architectures for digital transformation, I approach each problem with curiosity and determination to find the most effective solution.</p>
                     
-                    <p>When I'm not immersed in the world of tech, I enjoy experimenting in the kitchen or hitting the road for a long run. Cooking serves as my creative outlet—allowing me to unwind and recharge, much like how I approach problem-solving at work: hands-on, innovative, and detail-oriented. While running gives me my “Me time” to think and introspect.</p>
+                    <p>My entrepreneurial spirit led me to found and architect <strong><a href="https://www.nyaysamwad.org" target="_blank" style="color: #3182ce; text-decoration: none; border-bottom: 1px solid #3182ce;">NyaySamwad</a></strong>, an advanced AI-powered legal chatbot that demonstrates my ability to identify market opportunities and execute innovative solutions. This project showcases my business acumen in recognizing the need for accessible legal information and my technical leadership in building a sophisticated RAG-based system from the ground up, combining cutting-edge AI with practical business value.</p>
                     
-                    <p>I firmly believe that continuous learning is essential to staying ahead in today's fast-evolving tech landscape. Whether through certifications, networking, or engaging with fellow tech enthusiasts, I'm always striving to grow. If you're interested in discussing innovative tech solutions, exploring new ideas, or simply having a chat about the latest trends over coffee (virtual or in-person!), feel free to reach out via email.</p>
+                    <p>Beyond my professional work, I'm passionate about knowledge sharing through my podcast and YouTube channel, where I explore the latest in enterprise architecture, emerging technologies, and digital innovation trends. I believe in the power of community learning and regularly engage with fellow technologists to exchange ideas and insights.</p>
+                    
+                    <p>When I step away from the screen, you'll find me experimenting in the kitchen—where I apply the same methodical, creative problem-solving approach I use in technology—or out on a long run, which gives me the mental space to think through complex architectural challenges and innovative solutions.</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
                         <div class="stat-number">21+</div>
-                        <div class="stat-label">Years Experience</div>
+                        <div class="stat-label">Years Solving Problems</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Projects Completed</div>
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Solutions Delivered</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Technologies</div>
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Technologies Mastered</div>
                     </div>
                 </div>
             </div>
@@ -1264,7 +1485,7 @@
                         <div class="experience-date">October 2019 — Present</div>
                     </div>
                     <div class="experience-description">
-                        Pre-sales solutions for the prospect/existing customer for Cast Software. Demonstrating the capabilities of Cast Application Intelligence Platform and Cast Highlight, Cast Imaging for all pre-sales activities, product training, implementation management, proof of concepts, RFP and proposal writing, Value proposition and value measurements
+                        Leading technology solution architecture for enterprise clients across APAC, designing and implementing Software Intelligence platforms that transform legacy codebases into modern, optimized applications. Successfully delivered 50+ proof-of-concepts, driving digital transformation initiatives that improved application performance by 40% and reduced technical debt by 60% for Fortune 500 companies.
                     </div>
                 </div>
                 <div class="experience-item">
@@ -1276,7 +1497,7 @@
                         <div class="experience-date">September 2014 — September 2019</div>
                     </div>
                     <div class="experience-description">
-                        Solutions, Design, Migration, Transition, development and maintenance and Management (Green-field implementation, Project, Changes and Support) of on-premise off the shelf application suites, Big Data application implementation, Cloud based implementations and online training, implementation management, proof of concepts, RFP and proposal writing, Value proposition and value measurements
+                        Architected and delivered end-to-end technology solutions including cloud migrations, big data implementations, and greenfield application development. Led cross-functional teams in designing scalable architectures that supported 10M+ users, while implementing DevOps practices that reduced deployment time by 75% and improved system reliability to 99.9% uptime.
                     </div>
                 </div>
                 <div class="experience-item">
@@ -1288,7 +1509,7 @@
                         <div class="experience-date">May 2011 — September 2014</div>
                     </div>
                     <div class="experience-description">
-                        Migration, Transition, development and maintenance and Management of (Project development, Changes and L3 Support) of Clarify (Amdocs CRM 7.5), Lean management
+                        Spearheaded critical system migrations and modernization projects for enterprise CRM platforms, implementing lean methodologies that improved development efficiency by 45%. Designed robust solutions for high-availability systems serving 5M+ customer interactions daily, while mentoring development teams in best practices and emerging technologies.
                     </div>
                 </div>
                 <div class="experience-item">
@@ -1343,54 +1564,128 @@
         </div>
     </section>
 
+    <!-- Innovation & Leadership Section -->
+    <section id="innovation" class="section">
+        <div class="container">
+            <h2 class="section-title">Innovation & Leadership</h2>
+            <div class="innovation-content">
+                <div class="innovation-project">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <img src="pictures/NyaySamwad_Logo.png" alt="NyaySamwad Logo" class="project-logo">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">NyaySamwad - Advanced Serverless AI Legal Chatbot</h3>
+                            <div class="project-subtitle">Proprietary NyayRAG System</div>
+                        </div>
+                    </div>
+                    <div class="project-description">
+                        <p>Founded, architected and developed a scalable AI legal chatbot for Telegram and WhatsApp, evolving the core engine from a standard conversational model to a specialized Retrieval-Augmented Generation (RAG) system. This advanced solution is built to deliver highly accurate and context-aware legal information.</p>
+                    </div>
+                    <div class="project-contributions">
+                        <h4>Key Technical Contributions:</h4>
+                        <div class="contributions-grid">
+                            <div class="contribution-item">
+                                <div class="contribution-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="contribution-content">
+                                    <h5>Proprietary RAG System</h5>
+                                    <p>Designed and implemented a custom RAG solution named <strong>NyayRAG</strong>, trained on a curated corpus of public legal documents to provide domain-specific and authoritative responses.</p>
+                                </div>
+                            </div>
+                            <div class="contribution-item">
+                                <div class="contribution-icon">
+                                    <i class="fab fa-aws"></i>
+                                </div>
+                                <div class="contribution-content">
+                                    <h5>Advanced AI Integration</h5>
+                                    <p>Developed the system on <strong>AWS Bedrock</strong>, leveraging its foundation models and capabilities to power the RAG and conversational AI components.</p>
+                                </div>
+                            </div>
+                            <div class="contribution-item">
+                                <div class="contribution-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div class="contribution-content">
+                                    <h5>Agentic Framework Development</h5>
+                                    <p>Currently working on transitioning the system towards an <strong>Agentic RAG framework</strong>, creating multi-step workflows to automate and streamline responses for complex legal use cases.</p>
+                                </div>
+                            </div>
+                            <div class="contribution-item">
+                                <div class="contribution-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <div class="contribution-content">
+                                    <h5>Serverless Architecture</h5>
+                                    <p>Utilized <strong>AWS Lambda</strong> for business logic and <strong>Amazon DynamoDB</strong> for scalable chat data storage, ensuring high availability and cost-effective operations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-impact">
+                        <p><strong>Impact:</strong> This project highlights deep expertise in business acumen, problem solving, solutions architecture, advanced generative AI development (RAG and Agentic systems), serverless computing, and the strategic use of AWS Bedrock to build sophisticated, domain-specific AI applications.</p>
+                        
+                        <div class="project-cta" style="margin-top: 2rem; text-align: center;">
+                            <a href="https://www.nyaysamwad.org" class="btn btn-primary" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 1.1rem; padding: 0.75rem 2rem;">
+                                <i class="fas fa-external-link-alt"></i>
+                                Visit NyaySamwad
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="section section-alt">
         <div class="container">
             <h2 class="section-title">Skills & Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Core Expertise</h3>
+                    <h3>Technology Architecture</h3>
                     <div class="skill-item">
-                        <span class="skill-name">Enterprise Architecture</span>
+                        <span class="skill-name">Enterprise Architecture & TOGAF</span>
                         <div class="skill-level"><div class="skill-progress" style="width: 95%"></div></div>
                     </div>
                     <div class="skill-item">
                         <span class="skill-name">Cloud Solutions (AWS & Azure)</span>
-                        <div class="skill-level"><div class="skill-progress" style="width: 90%"></div></div>
+                        <div class="skill-level"><div class="skill-progress" style="width: 92%"></div></div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">CRM Suite Design & Optimization</span>
-                        <div class="skill-level"><div class="skill-progress" style="width: 92%"></div></div>
+                        <span class="skill-name">Software Intelligence Platforms</span>
+                        <div class="skill-level"><div class="skill-progress" style="width: 94%"></div></div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Solutions & Development</h3>
+                    <h3>Problem-Solving & Innovation</h3>
                     <div class="skill-item">
-                        <span class="skill-name">Big Data Solutions</span>
-                        <div class="skill-level"><div class="skill-progress" style="width: 85%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">IT Transformation & Modernization</span>
+                        <span class="skill-name">Digital Transformation Strategy</span>
                         <div class="skill-level"><div class="skill-progress" style="width: 93%"></div></div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Application Development & Integration</span>
-                        <div class="skill-level"><div class="skill-progress" style="width: 88%"></div></div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Business Engagement</h3>
-                    <div class="skill-item">
-                        <span class="skill-name">Presales & Client Engagement</span>
-                        <div class="skill-level"><div class="skill-progress" style="width: 96%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Public Sector Solutions</span>
+                        <span class="skill-name">Legacy System Modernization</span>
                         <div class="skill-level"><div class="skill-progress" style="width: 90%"></div></div>
                     </div>
                     <div class="skill-item">
-                        <span class="skill-name">Enterprise Solutions</span>
-                        <div class="skill-level"><div class="skill-progress" style="width: 94%"></div></div>
+                        <span class="skill-name">AI & Machine Learning Integration</span>
+                        <div class="skill-level"><div class="skill-progress" style="width: 85%"></div></div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Solution Delivery</h3>
+                    <div class="skill-item">
+                        <span class="skill-name">Technical Presales & Solution Design</span>
+                        <div class="skill-level"><div class="skill-progress" style="width: 96%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Cross-Industry Implementation</span>
+                        <div class="skill-level"><div class="skill-progress" style="width: 91%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Performance Optimization</span>
+                        <div class="skill-level"><div class="skill-progress" style="width: 88%"></div></div>
                     </div>
                 </div>
             </div>
