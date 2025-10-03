@@ -894,7 +894,8 @@
         .project-logo {
             width: 60px;
             height: 60px;
-            object-fit: contain;
+            object-fit: cover;
+            border-radius: 50%;
             transition: transform 0.3s ease;
         }
 
@@ -1017,10 +1018,11 @@
 
         .contact-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(3, 1fr); /* consistent columns for alignment */
             gap: 2rem;
             margin-bottom: 3rem;
             text-align: center;
+            align-items: start; /* align tiles top */
         }
 
         .contact-item {
@@ -1029,6 +1031,7 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             border: 1px solid #e2e8f0;
+            height: 100%; /* ensure equal tile heights within grid row */
         }
 
         .contact-item i {
@@ -1046,7 +1049,20 @@
         .contact-item p {
             color: #4a5568;
             margin: 0;
+            overflow-wrap: anywhere;
+            word-break: break-word;
         }
+        /* Email tile: keep single line; align tiles in grid */
+          .contact-info .contact-item:nth-child(3) {
+              grid-column: auto;
+          }
+          .contact-info .contact-item:nth-child(3) p {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              word-break: normal;
+              overflow-wrap: normal;
+          }
 
         .contact-message {
             font-size: 1.1rem;
@@ -1334,6 +1350,8 @@
             .project-logo {
                 width: 50px;
                 height: 50px;
+                object-fit: cover;
+                border-radius: 50%;
             }
             
             .contribution-icon {
