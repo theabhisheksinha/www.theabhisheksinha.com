@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhishek Sinha - IT/Software Pre-Sales & Enterprise Architect</title>
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/pictures/Abhishek Sinha-Headshot.png" sizes="32x32">
-<link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20251207" sizes="any">
+<link rel="apple-touch-icon" href="/pictures/Abhishek-Profile-noBG.png">
+<link rel="mask-icon" href="/favicon.svg?v=20251207" color="#3182ce">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -347,11 +348,13 @@
         }
 
         .profile-pic {
-            width: 450px;
-            height: 450px;
+            width: clamp(340px, 30vw, 580px);
+            height: auto;
+            aspect-ratio: 1;
+            max-width: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 6px solid #ffffff;
+            border: clamp(4px, 0.5vw, 8px) solid #ffffff;
             box-shadow: 0 25px 50px rgba(0,0,0,0.15), 0 0 0 1px rgba(49, 130, 206, 0.1);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             opacity: 0;
@@ -1204,10 +1207,7 @@
                 max-width: 100%;
             }
 
-            .profile-pic {
-                width: 320px;
-                height: 320px;
-            }
+            
 
             .cta-buttons {
                 justify-content: center;
@@ -1297,10 +1297,7 @@
                 font-size: 1.1rem;
             }
             
-            .profile-pic {
-                width: 260px;
-                height: 260px;
-            }
+            
 
             .cta-buttons {
                 flex-direction: column;
@@ -1447,7 +1444,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-<img src="pictures/Abhishek Sinha-Headshot.png" alt="Abhishek Sinha" class="profile-pic">
+<img src="pictures/Abhishek Sinha-Headshot.png" srcset="pictures/Abhishek Sinha-Headshot.png 580w, pictures/Abhishek Sinha-Headshot.png 340w" sizes="(max-width: 768px) 70vw, 30vw" alt="Abhishek Sinha" class="profile-pic">
                 </div>
             </div>
         </div>
