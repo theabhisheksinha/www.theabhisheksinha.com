@@ -1676,6 +1676,110 @@
             margin-bottom: 1rem;
         }
 
+        /* Competency Grid */
+        .competency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .competency-pillar {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            height: 100%;
+        }
+
+        .pillar-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f7fafc;
+        }
+
+        .pillar-icon {
+            font-size: 1.8rem;
+            color: #3182ce;
+            width: 50px;
+            height: 50px;
+            background: rgba(49, 130, 206, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pillar-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        .cert-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .cert-badge {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #edf2f7;
+            transition: all 0.3s ease;
+        }
+
+        .cert-badge:hover {
+            transform: translateX(5px);
+            background: #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-color: #3182ce;
+        }
+
+        .cert-badge.featured {
+            background: #ebf8ff;
+            border-color: #bee3f8;
+        }
+
+        .cert-badge.featured:hover {
+            background: #e6fffa;
+            border-color: #38b2ac;
+        }
+
+        .cert-badge i {
+            font-size: 1.2rem;
+            color: #718096;
+        }
+
+        .cert-badge.featured i {
+            color: #3182ce;
+        }
+
+        .cert-info {
+            flex: 1;
+        }
+
+        .cert-name {
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 0.95rem;
+            margin-bottom: 0.2rem;
+            line-height: 1.4;
+        }
+
+        .cert-meta {
+            font-size: 0.8rem;
+            color: #718096;
+        }
+
         /* S.T.A.R. Framework */
         .star-grid {
             display: grid;
@@ -2252,84 +2356,142 @@
     <section id="certifications" class="section">
         <div class="container">
             <h2 class="section-title">Certifications & Credentials</h2>
-            <div class="badge-grid">
-                <!-- High Priority -->
-                <div class="badge-card highlight">
-                    <i class="fas fa-robot badge-icon"></i>
-                    <div class="cert-title">Google Cloud Generative AI Leader</div>
-                    <div class="cert-issuer">Google Cloud • 2025</div>
-                </div>
-                <div class="badge-card highlight">
-                    <i class="fas fa-microchip badge-icon"></i>
-                    <div class="cert-title">NVIDIA DLI — Building RAG Agents with LLMs</div>
-                    <div class="cert-issuer">NVIDIA Deep Learning Institute • 2025</div>
-                </div>
+            <div class="competency-grid">
                 
-                <!-- Cloud & Architecture -->
-                <div class="badge-card">
-                    <i class="fab fa-microsoft badge-icon"></i>
-                    <div class="cert-title">Microsoft Certified-Azure Fundamentals</div>
-                    <div class="cert-issuer">Microsoft • 2019</div>
-                </div>
-                <div class="badge-card">
-                    <i class="fab fa-aws badge-icon"></i>
-                    <div class="cert-title">AWS Certified Developer - Associate</div>
-                    <div class="cert-issuer">Amazon Web Services • 2019</div>
-                </div>
-                <div class="badge-card">
-                    <i class="fab fa-aws badge-icon"></i>
-                    <div class="cert-title">AWS Certified Solutions Architect</div>
-                    <div class="cert-issuer">Amazon Web Services • 2019</div>
-                </div>
-                <div class="badge-card">
-                    <i class="fas fa-certificate badge-icon"></i>
-                    <div class="cert-title">TOGAF 9.1 Enterprise Architect</div>
-                    <div class="cert-issuer">The Open Group • 2016</div>
-                </div>
-
-                <!-- Development & Database -->
-                <div class="badge-card">
-                    <i class="fas fa-chart-bar badge-icon"></i>
-                    <div class="cert-title">Big Data Developer</div>
-                    <div class="cert-issuer">Wiley • 2015</div>
-                </div>
-                <div class="badge-card">
-                    <i class="fab fa-android badge-icon"></i>
-                    <div class="cert-title">Android Application Programming</div>
-                    <div class="cert-issuer">Aptech Ltd • 2015</div>
-                </div>
-                <div class="badge-card">
-                    <i class="fas fa-database badge-icon"></i>
-                    <div class="cert-title">OCA - Oracle Database 10g Certified Associate</div>
-                    <div class="cert-issuer">Oracle • 2010</div>
-                </div>
-                <div class="badge-card">
-                    <i class="fas fa-database badge-icon"></i>
-                    <div class="cert-title">Siebel 8.0 Consultant</div>
-                    <div class="cert-issuer">Oracle • 2009</div>
-                </div>
-                <div class="badge-card">
-                    <i class="fab fa-ibm badge-icon"></i>
-                    <div class="cert-title">SOA Foundation Certified</div>
-                    <div class="cert-issuer">IBM • 2010</div>
+                <!-- Pillar 1: AI & Emerging Tech -->
+                <div class="competency-pillar">
+                    <div class="pillar-header">
+                        <div class="pillar-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="pillar-title">AI & Emerging Tech</div>
+                    </div>
+                    <div class="cert-list">
+                        <div class="cert-badge featured">
+                            <i class="fas fa-star"></i>
+                            <div class="cert-info">
+                                <div class="cert-name">Google Cloud Generative AI Leader</div>
+                                <div class="cert-meta">Google Cloud • 2025</div>
+                            </div>
+                        </div>
+                        <div class="cert-badge featured">
+                            <i class="fas fa-microchip"></i>
+                            <div class="cert-info">
+                                <div class="cert-name">Building RAG Agents with LLMs</div>
+                                <div class="cert-meta">NVIDIA DLI • 2025</div>
+                            </div>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-database"></i>
+                            <div class="cert-info">
+                                <div class="cert-name">Certified Big Data Developer</div>
+                                <div class="cert-meta">Wiley</div>
+                            </div>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fab fa-android"></i>
+                            <div class="cert-info">
+                                <div class="cert-name">Android Application Programming</div>
+                                <div class="cert-meta">Aptech Ltd</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Process & Language -->
-                <div class="badge-card">
-                    <i class="fas fa-cogs badge-icon"></i>
-                    <div class="cert-title">LEAN Foundation - Navigator</div>
-                    <div class="cert-issuer">Atos • 2012</div>
+                <!-- Pillar 2: Cloud & Enterprise Architecture -->
+                <div class="competency-pillar">
+                    <div class="pillar-header">
+                        <div class="pillar-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="pillar-title">Cloud & Architecture</div>
+                    </div>
+                    <div class="cert-list">
+                        <div class="cert-badge">
+                            <i class="fas fa-sitemap"></i>
+                            <div class="cert-info">
+                                <div class="cert-name">TOGAF 9.1 Enterprise Architect</div>
+                                <div class="cert-meta">The Open Group</div>
+                            </div>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fab fa-aws"></i>
+                            <div class="cert-info">
+                                <div class="cert-name">AWS Certified Solutions Architect</div>
+                                <div class="cert-meta">Amazon Web Services</div>
+                            </div>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-code"></i>
+                            <div class="cert-info">
+                                <div class="cert-name">AWS Certified Developer – Associate</div>
+                                <div class="cert-meta">Amazon Web Services</div>
+                            </div>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fab fa-microsoft"></i>
+                            <div class="cert-info">
+                                <div class="cert-name">Microsoft Certified: Azure Fundamentals</div>
+                                <div class="cert-meta">Microsoft</div>
+                            </div>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fab fa-ibm"></i>
+                            <div class="cert-info">
+                                <div class="cert-name">Certified SOA Practitioner</div>
+                                <div class="cert-meta">IBM</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="badge-card">
-                    <i class="fas fa-language badge-icon"></i>
-                    <div class="cert-title">I.E.L.T.S.</div>
-                    <div class="cert-issuer">IELTS • 2014</div>
+
+                <!-- Pillar 3: Specialized Systems & Management -->
+                <div class="competency-pillar">
+                    <div class="pillar-header">
+                        <div class="pillar-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="pillar-title">Systems & Management</div>
+                    </div>
+                    <div class="cert-list">
+                        <div class="cert-badge">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="cert-info">
+                                <div class="cert-name">Lean Foundation – Navigator</div>
+                                <div class="cert-meta">Atos</div>
+                            </div>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-server"></i>
+                            <div class="cert-info">
+                                <div class="cert-name">Siebel 8.0 Consultant</div>
+                                <div class="cert-meta">Oracle</div>
+                            </div>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-database"></i>
+                            <div class="cert-info">
+                                <div class="cert-name">OCA - Oracle Database 10g Associate</div>
+                                <div class="cert-meta">Oracle</div>
+                            </div>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-language"></i>
+                            <div class="cert-info">
+                                <div class="cert-name">I.E.L.T.S. (7.5 Score)</div>
+                                <div class="cert-meta">British Council</div>
+                            </div>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-comment-dots"></i>
+                            <div class="cert-info">
+                                <div class="cert-name">Spanish Language (Level 1)</div>
+                                <div class="cert-meta">Instituto Hispania</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="badge-card">
-                    <i class="fas fa-language badge-icon"></i>
-                    <div class="cert-title">Level 1 Spanish Language</div>
-                    <div class="cert-issuer">Instituto Hispania • 2008</div>
-                </div>
+
             </div>
         </div>
     </section>
